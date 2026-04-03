@@ -1,3 +1,9 @@
+# 9. Prosty kalkulator:
+# Utwórz plik task9_calculator.py .
+# Poproś o dwie liczby i znak ( + , - , * , / ).
+# Wykonaj operację i wyświetl wynik.
+# Użyj if/elif/else .
+
 num1 = int(input("Podaj pierwszą liczbę: "))
 num2 = int(input("Podaj drugą liczbę: "))
 
