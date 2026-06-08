@@ -5,6 +5,6 @@
 name = input("Podaj swoje imię: ")
 birth_year = int(input("Podaj rok urodzenia: "))
 
-age = 2026 - birth_year
+age = 2025 - birth_year
 
-print(f"Cześć {name}! w 2026 roku będziesz mieć około {age} lat.")
+print(f"Cześć {name}! w 2025 roku będziesz mieć około {age} lat.")

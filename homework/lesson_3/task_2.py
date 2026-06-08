@@ -3,7 +3,7 @@
 #   / (wzrost * wzrost) .
 
 weight = float(input("Podaj wagę [kg]: "))
-height = float(input("Podaj wzrost [cm]:"))
+height = float(input("Podaj wzrost [m]:"))
 
 bmi = weight / (height**2)
 print(f"BMI wynosi {round(bmi, 2)}")

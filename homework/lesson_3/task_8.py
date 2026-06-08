@@ -9,3 +9,7 @@ print(number_1)
 
 number_2 = int(number_1)
 print(number_2)
+
+
+# Podczas konwersji float na int część dziesiętna jest odcinana.
+# Liczba 5.8 została zamieniona na 5.

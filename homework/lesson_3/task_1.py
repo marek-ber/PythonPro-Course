@@ -7,8 +7,8 @@ age = 37
 average = 4.5
 status_student = False
 
-print(type(name))
-print(type(age))
-print(type(average))
-print(type(status_student))
+print(name, type(name))
+print(age, type(age))
+print(average, type(average))
+print(status_student, type(status_student))
 

@@ -8,4 +8,4 @@ full_name = input("Podaj imię i nazwisko: ")
 
 full_name1 = full_name.strip().title()
 
-print(f"Sformatowane: ", {full_name1}, "długość: ", {len(full_name1)})
+print(f"Sformatowane: {full_name1}, długość: {len(full_name1)}")
