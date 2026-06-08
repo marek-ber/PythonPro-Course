@@ -2,11 +2,9 @@
 # Następnie, używając konwersji na bool , sprawdź, czy wpisany tekst jest "prawdziwy"
 # (niepusty) i wyświetl odpowiedni komunikat.
 
-sentence1 = input("Napisz dowolne zdanie: ")
+sentence = input("Napisz dowolne zdanie: ")
 
-sentence2 = bool(sentence1)
-
-if sentence2:
+if sentence:
     print("Tekst jest prawdziwy (niepusty).")
 else:
     print("Tekst jest fałszywy (pusty).")

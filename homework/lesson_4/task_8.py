@@ -4,10 +4,13 @@
 
 dog_age = int(input("Podaj wiek psa: "))
 
-if dog_age <= 1:
-    print("Twój pies ma 15 lat")
-elif dog_age <= 2:
-    print("Twój pies ma 24 lata")
+if dog_age == 1:
+    human_age = 15
+elif dog_age == 2:
+    human_age = 24
 elif dog_age > 2:
-    older_dog = 15 + 9 + (dog_age - 2) * 5
-    print(f"Twój pies ma {older_dog} lat")
+    human_age = 15 + 9 + (dog_age - 2) * 5
+else:
+    human_age = 0
+
+print(f"Twój pies ma {human_age} ludzkich lat")

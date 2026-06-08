@@ -20,3 +20,8 @@ print(id(e))
 print(id(f))
 
 # Dla nas są to cyfry które wystepują po sobie dla pythona cyfry powyżej 256 nie są buforowane i wtedy tworzy nowe obiekty.
+
+# Python przechowuje w pamięci (cache) małe liczby całkowite z zakresu od -5 do 256.
+# Dlatego zmienne a, b i c wskazują na ten sam obiekt i mają takie samo id().
+# Dla liczby 257 Python może tworzyć osobne obiekty, więc id() może być różne.
+# Mechanizm ten pozwala oszczędzać pamięć i przyspiesza działanie programu.
