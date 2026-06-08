@@ -11,7 +11,7 @@ user = input("Podaj imię: ").capitalize()
 
 for name in names:
     if user == name:
-        print("Znaleziono")
+        print("Znaleziono!")
         break
-    else:
-        print("Nie znaleziono imienia.")
+else:
+    print("Nie znaleziono imienia na liście.")
