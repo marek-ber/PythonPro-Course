@@ -1,0 +1,19 @@
+{% load static %} <!-- Załaduj bibliotekę znaczników static na górze szablonu -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Strona ze stylami</title>
+    <!-- Link do pliku CSS -->
+    <link rel="stylesheet" href="{% static 'articles/styles.css' %}">
+</head>
+
+<body>
+    <h1>Ta strona ma styl!</h1>
+
+    <!-- Przykład użycia obrazka -->
+    <img src="{% static 'articles/images/logo.jpg' %}" alt="Moje logo">
+</body>
+
+</html>

@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
     <meta charset="UTF-8">
-    <title> Filmy </title> 
+    <title>{{ page_title }}</title>
 </head>
-
 <body>
-
     <h1>{{ page_title }}</h1>
 
     <ul>
         {% for movie in movies %}
-            <li>{{ movie }}</li>
+            {% if loop.index % 2 == 0 %}
+                <li style="background-color: lightgray; padding: 8px;">
+                    {{ movie }}
+                </li>
+            {% else %}
+                <li style="background-color: white; padding: 8px;">
+                    {{ movie }}
+                </li>
+            {% endif %}
         {% endfor %}
     </ul>
 
+    <p><a href="/">Powrót</a></p>
 </body>
-
 </html>

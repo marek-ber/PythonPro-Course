@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Artykułów</title>
+</head>
+
+<body>
+    <h1>Artykuły</h1>
+
+    {% if articles %}
+    <ul>
+        {% for article in articles %}
+        <li>
+            <h2>{{ article.title }}</h2>
+            <p>Opublikowano: {{ article.pub_date|date:"d.m.Y" }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Brak artykułów do wyświetlenia.</p>
+    {% endif %}
+</body>
+
+</html>
