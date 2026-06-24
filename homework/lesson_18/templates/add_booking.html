@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj rezerwację</title>
+</head>
+<body>
+
+<h1>Nowa rezerwacja</h1>
+
+<form method="POST">
+
+    <p>
+        Tytuł:
+        <input type="text" name="title" required>
+    </p>
+
+    <p>
+        Użytkownik:
+        <select name="user_id" required>
+            {% for user in users %}
+            <option value="{{ user.id }}">{{ user.name }}</option>
+            {% endfor %}
+        </select>
+    </p>
+
+    <p>
+        Sala:
+        <select name="room_id" required>
+            {% for room in rooms %}
+            <option value="{{ room.id }}">{{ room.name }}</option>
+            {% endfor %}
+        </select>
+    </p>
+
+    <p>
+        Data rozpoczęcia:
+        <input type="datetime-local" name="start_time" required>
+    </p>
+
+    <p>
+        Data zakończenia:
+        <input type="datetime-local" name="end_time" required>
+    </p>
+
+    <button type="submit">Dodaj rezerwację</button>
+
+</form>
+
+<p>
+    <a href="/dashboard">Powrót do dashboardu</a>
+</p>
+
+</body>
+</html>
