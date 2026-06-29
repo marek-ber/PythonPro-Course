@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Strona Główna{% endblock %}
+{% block content %}
+<h2>To jest strona główna</h2>
+<p>Witaj, {{ user_name }}!</p>
+<h3>Lista produktów:</h3>
+<ul>
+    {% for product in products %}
+    <li>{{ product.name }} - {{ product.price }} PLN</li>
+    {% empty %}
+    <li>Brak produktów do wyświetlenia.</li>
+    {% endfor %}
+
+    {{ request }}
+</ul>
+{% endblock %}

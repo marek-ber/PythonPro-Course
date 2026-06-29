@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Skontaktuj się z nami</h2>
+<p style="color: red;">{{ error }}</p>
+<form method="post">
+    {% csrf_token %} <!-- Ważne zabezpieczenie przed atakami CSRF! -->
+    {{ form.as_p }} <!-- Django wygeneruje pola formularza jako
+paragrafy <p> -->
+    <button type="submit">Wyślij</button>
+</form>
+{% endblock %}

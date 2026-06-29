@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Moja Strona{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <h1>Witaj na mojej stronie!</h1>
+    </header>
+    <main>
+        {% block content %}
+        <!-- Treść podstrony zostanie wstawiona tutaj -->
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 - Kurs Django</p>
+    </footer>
+</body>
+
+</html>
