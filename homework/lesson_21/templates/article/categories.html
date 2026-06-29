@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Kategorii</title>
+    <link rel="stylesheet" href="{% static 'article/style.css' %}">
+</head>
+
+<body>
+    <h1>Wszystkie kategorie</h1>
+    {% if categories %}
+    <ul>
+        {% for category in categories %}
+        <li>
+            <h2>{{ category.name }}</h2>
+            
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Brak kategorii do wyświetlenia.</p>
+    {% endif %}
+ 
+</body>
+
+</html>
