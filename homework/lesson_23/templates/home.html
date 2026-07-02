@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Strona główna</h2>
+<div class="border-top pt-3">
+    {% if user.is_authenticated %}
+    <div class="form-group">
+        <p><span>Witaj, {{ user.username }}!</span></p>
+        <form method="POST" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button class="btn btn-outline-info" type="submit">
+                Wyloguj się
+            </button>
+        </form>
+    </div>
+    {% else %}
+    <h3>Jesteś niezalogowany </h3>
+    <a href="{% url 'login' %}">Zaloguj</a>
+    <a href="{% url 'register' %}">Zarejestruj</a>
+    {% endif %}
+
+</div>
+{% endblock content %}
