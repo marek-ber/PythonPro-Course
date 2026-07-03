@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Lista użytkowników</h2>
+    <p>Ten widok jest dostępny tylko dla użytkowników z is_staff=True.</p>
+
+    <ul>
+        {% for user_obj in users %}
+            <li>{{ user_obj.username }} - {{ user_obj.email }}</li>
+        {% empty %}
+            <li>Brak użytkowników.</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

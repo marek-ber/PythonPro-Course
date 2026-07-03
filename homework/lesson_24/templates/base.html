@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Lekcja 24{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <h1>Lekcja 24 - logowanie i użytkownicy</h1>
+
+        <nav>
+            <a href="{% url 'home' %}">Strona główna</a>
+
+            {% if user.is_authenticated %}
+                <a href="{% url 'profile' %}">Profil</a>
+                <a href="{% url 'products' %}">Produkty</a>
+                <a href="{% url 'password-change' %}">Zmień hasło</a>
+
+                {% if user.is_staff %}
+                    <a href="{% url 'staff-users' %}">Użytkownicy</a>
+                {% endif %}
+
+                <form method="POST" action="{% url 'logout' %}" style="display: inline;">
+                    {% csrf_token %}
+                    <button type="submit">Wyloguj</button>
+                </form>
+            {% else %}
+                <a href="{% url 'login' %}">Zaloguj</a>
+                <a href="{% url 'register' %}">Zarejestruj</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Kurs Django</p>
+    </footer>
+</body>
+
+</html>

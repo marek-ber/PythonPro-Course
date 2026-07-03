@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Mechanizm next</h2>
+
+    <p>
+        Jeżeli niezalogowany użytkownik spróbuje wejść na chronioną stronę,
+        Django przekieruje go na logowanie i doda do adresu parametr next.
+    </p>
+
+    <p>Przykład:</p>
+
+    <pre>/login/?next=/profile/</pre>
+
+    <p>
+        Po poprawnym zalogowaniu Django przeniesie użytkownika z powrotem
+        na stronę zapisaną w parametrze next, czyli w tym przykładzie na /profile/.
+    </p>
+{% endblock content %}
