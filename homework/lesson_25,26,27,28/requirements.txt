@@ -1,0 +1,10 @@
+Django==6.0.4
+djangorestframework==3.16.1
+djangorestframework-simplejwt
+djoser
+psycopg2-binary==2.9.10
+python-dotenv==1.1.1
+django-debug-toolbar
+django-redis
+
+drf-spectacular
