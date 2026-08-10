@@ -1,0 +1,25 @@
+9.
+✏️ Zadanie 9 – APIRouter
+Podziel aplikację z książkami na moduły:
+routers/books.py - endpoints książek
+routers/authors.py - endpoints autorów
+main.py - dołącz routery
+(średnie)
+10.
+✏️ Zadanie 10 – Dependency Injection
+Stwórz dependency verify_api_key sprawdzające header X-API-Key.
+Użyj go w 3 różnych endpoints.
+(średnie)
+11.
+✏️ Zadanie 11 – Zagnieżdżone ModeleZdefiniuj modele:
+Author (name, email)
+Book (title, author: Author, price)
+Utwórz endpoint POST /books przyjmujący zagnieżdżony JSON.
+(średnie)
+12.
+✏️ Zadanie 12 – Custom Validators
+Dla modelu Product dodaj validators:
+name: tylko litery i cyfry
+price: musi być > 0 i <= 10000
+category: tylko z listy ["Electronics", "Books", "Clothing"]
+(średnie)

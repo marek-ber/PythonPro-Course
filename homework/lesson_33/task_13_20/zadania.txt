@@ -1,0 +1,55 @@
+3.
+🧠 Zadanie 13 – SQLAlchemy Integration
+Przepisz API książek używając async SQLAlchemy:
+Modele ORM dla Book
+Pydantic schemas (BookCreate, BookResponse)
+Dependency injection dla sesji DB
+Pełny CRUD
+(challenge)
+14.
+🧠 Zadanie 14 – Relacje One-to-Many
+Rozszerz zadanie 13:
+Author ma wiele Books (relacja 1:N)
+GET /authors/{id}/books - książki autora
+Użyj selectinload() dla eager loading
+(challenge)
+15.
+🧠 Zadanie 15 – Background Tasks
+Do API książek dodaj:
+Po utworzeniu książki: background task wysyła "email" (log do pliku)Po usunięciu: background task aktualizuje statystyki
+(challenge)
+16.
+🧠 Zadanie 16 – Middleware Logging
+Stwórz middleware który:
+Loguje wszystkie requesty (metoda, path, czas)
+Dodaje header X-Request-ID do każdego response
+Zapisuje logi do pliku requests.log
+(challenge)
+17.
+🧠 Zadanie 17 – Startup/Shutdown Events
+Dodaj event hooks:
+startup: inicjalizuj bazę, załaduj cache z plikiem JSON
+shutdown: zapisz cache do pliku, zamknij połączenie DB
+(challenge)
+18.
+🧠 Zadanie 18 – Paginacja i Filtrowanie
+Dla GET /books dodaj:
+Paginację (skip, limit)
+Filtrowanie (category, min_price, max_price)
+Sortowanie (sort_by: "price" lub "title")
+(challenge)
+19.
+🧠 Zadanie 19 – Blog API
+Stwórz kompletne API bloga:
+Users (CRUD)
+Posts (CRUD, tylko autor może edytować)
+Comments (dodawanie do postów)
+GET /posts/{id}/with-comments (eager loading)
+Background task: email przy nowym komentarzu
+(challenge)
+20.
+🧠 Zadanie 20 – AI Integration
+Do Blog API dodaj:POST /posts/{id}/summarize - generuje streszczenie posta (OpenAI API lub symulacja)
+Background task: analiza sentiment komentarzy
+Middleware: auto-moderacja contentu (sprawdza czy nie ma wulgaryzmów)
+(challenge)
